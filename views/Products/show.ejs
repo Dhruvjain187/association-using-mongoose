@@ -16,9 +16,14 @@
     <ul>
         <li>$<%=product.price%>
         </li>
-        <a href="/products?category=<%=product.category%>">
-            <%=product.category%>
-        </a>
+        <li><a href="/products?category=<%=product.category%>">
+                <%=product.category%>
+            </a></li>
+        <li>
+            <a href="/farms/<%=product.farm._id%>">
+                <%=product.farm.name%>
+            </a>
+        </li>
     </ul>
     <a href="/products">All Products</a>
     <a href="/products/<%=product._id%>/edit">Edit Products</a>

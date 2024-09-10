@@ -4,7 +4,7 @@ const Product = require("./models/product");
 
 async function main() {
     try {
-        await mongoose.connect('mongodb://127.0.0.1:27017/farmStand');
+        await mongoose.connect('mongodb://127.0.0.1:27017/farmStand2');
         console.log("connect");
 
     }
@@ -56,10 +56,10 @@ const seedProducts = [
     }
 ];
 
-// Product.insertMany(seedProducts)
-//     .then(res => {
-//         console.log(res);
-//     })
-//     .catch(err => {
-//         console.log(err);
-//     })
+Product.insertMany(seedProducts)
+    .then(res => {
+        console.log(res);
+    })
+    .catch(err => {
+        console.log(err);
+    })
